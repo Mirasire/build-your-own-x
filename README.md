@@ -1,3 +1,4 @@
+# Build Your Own
 
 This repository is a compilation of well-written, step-by-step guides for re-creating our favorite technologies from scratch. It's a great way to learn. Submissions welcome, just send a PR.
 
@@ -348,11 +349,11 @@ This repository is a compilation of well-written, step-by-step guides for re-cre
 
 #### Build your own `Text Editor`
 
-* [**C**: _Build Your Own Text Editor_](https://viewsourcecode.org/snaptoken/kilo/)
-* [**C++**: _Designing a Simple Text Editor_](http://www.fltk.org/doc-1.1/editor.html)
-* [**Python**: _Python Tutorial: Make Your Own Text Editor_](https://www.youtube.com/watch?v=xqDonHEYPgA) [video]
-* [**Python**: _Create a Simple Python Text Editor!_](http://www.instructables.com/id/Create-a-Simple-Python-Text-Editor/)
-* [**Ruby**: _Build a Collaborative Text Editor Using Rails_](https://blog.aha.io/text-editor/)
+[] [**C**: _Build Your Own Text Editor_](https://viewsourcecode.org/snaptoken/kilo/)
+[] [**C++**: _Designing a Simple Text Editor_](http://www.fltk.org/doc-1.1/editor.html)
+[] [**Python**: _Python Tutorial: Make Your Own Text Editor_](https://www.youtube.com/watch?v=xqDonHEYPgA) [video]
+[] [**Python**: _Create a Simple Python Text Editor!_](http://www.instructables.com/id/Create-a-Simple-Python-Text-Editor/)
+[] [**Ruby**: _Build a Collaborative Text Editor Using Rails_](https://blog.aha.io/text-editor/)
 
 #### Build your own `Visual Recognition System`
 
