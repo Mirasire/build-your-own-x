@@ -2,7 +2,7 @@
 
 - [ ] [**C**: _Build Your Own Text Editor_](https://viewsourcecode.org/snaptoken/kilo/)
     - [X] Setup
-    - [ ] Entering raw mode
+    - [X] Entering raw mode
     - [ ] Raw input and output
     - [ ] A text viewer
     - [ ] A text editor
@@ -25,4 +25,38 @@
 using `echo $?` in terminal, after run `kilo` is a way to check the `kilo`'s return value. which is defined in `kilo.c`
 
 ## Ch2. raw mode
+
+**added feature**
+
+- [X] press `q` to quit
+- [X] control **terminal**'s behaviour
+- [X] turn off **canonical mode**
+- [X] display **keypresses**
+- [X] turn off `ctrl-c` and `ctrl-z` (lflag: `ISIG`)
+- [X] turn off `ctrl-s` and `ctrl-q` (iflag: `IXON`)
+- [X] disable `ctrl-v` (lflag: `IEXTEN`)
+- [X] fix `ctrl-M` (iflag: `ICRNL`)
+- [X] turn off all output processing (oflag: `OPOST`)
+- [X] compatible with old terminal
+- [X] added timeout for `read()`
+- [ ] added error handling
+- [ ] split code into sections
+
+**canonical mode(cooked mode)**
+
+This mode is `Terminal`'s default mode. In this mode, keyboard's press will send to program(running on terminal) only when user press `Enter`.
+
+using `ICANON` flag in `c_flag` to disable this mode.
+
+**raw mode**
+
+Terminal send to program when each single key pressed.
+
+
+**miscellaneous flags**
+
+- When `BRKINT` is turned on, a break condition will cause a `SIGINT` signal to be sent to the program, like pressing `Ctrl-C`.
+- `INPCK` enables parity checking, which doesn’t seem to apply to modern terminal emulators.
+- `ISTRIP` causes the 8th bit of each input byte to be stripped, meaning it will set it to 0. This is probably already turned off.
+- `CS8` is not a flag, it is a bit mask with multiple bits, which we set using the bitwise-OR (|) operator unlike all the flags we are turning off. It sets the character size (CS) to 8 bits per byte. On my system, it’s already set that way.
 
