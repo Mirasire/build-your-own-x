@@ -24,7 +24,7 @@
 
 using `echo $?` in terminal, after run `kilo` is a way to check the `kilo`'s return value. which is defined in `kilo.c`
 
-## Ch2. raw mode
+## Ch2. Raw mode
 
 **added feature**
 
@@ -39,8 +39,8 @@ using `echo $?` in terminal, after run `kilo` is a way to check the `kilo`'s ret
 - [X] turn off all output processing (oflag: `OPOST`)
 - [X] compatible with old terminal
 - [X] added timeout for `read()`
-- [ ] added error handling
-- [ ] split code into sections
+- [X] added error handling
+- [X] split code into sections
 
 **canonical mode(cooked mode)**
 
@@ -60,3 +60,5 @@ Terminal send to program when each single key pressed.
 - `ISTRIP` causes the 8th bit of each input byte to be stripped, meaning it will set it to 0. This is probably already turned off.
 - `CS8` is not a flag, it is a bit mask with multiple bits, which we set using the bitwise-OR (|) operator unlike all the flags we are turning off. It sets the character size (CS) to 8 bits per byte. On my system, it’s already set that way.
 
+
+## Ch3. Raw input and output
