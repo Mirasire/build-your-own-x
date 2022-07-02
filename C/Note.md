@@ -62,3 +62,50 @@ Terminal send to program when each single key pressed.
 
 
 ## Ch3. Raw input and output
+
+- [X] press `ctrl-q` to quit
+- [X] refactor keyboard input
+- [X] clear the screen
+- [X] reposition the cursor
+- [X] clear screen on exit
+- [X] tildes
+- [X] global state
+- [X] get window's size (easy way)
+- [X] get window's size (hard way)
+- [ ]
+- [ ]
+
+
+**CTRL_KEY**
+
+```cpp
+//'a' is (61)D
+#define CTRL_KEY(k) ((k) & 0x1f)
+```
+
+**clear the screen**
+
+
+the reason of why using `"\x1b[2J"` in function `editorRefreshScreen`.
+
+- `x1b` is value of escape key's press value
+- `[`, `2`, `J`: see the refrence in ![#Erasing](https://vt100.net/docs/vt100-ug/chapter3.html)
+- the `4` at `write(..., 4)` means we are writing 4 bytes out to the terminal.
+
+**reposition the cursor**
+
+`<esc>[H` *escape sequence* to reposition the cursor back up at the **top-left** corner.
+
+**Tildes**
+
+the tildes in left , which like when vim create a new file the `~` in the left. 
+
+Example below:
+
+```
+~
+~
+~
+~
+~
+```
